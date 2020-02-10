@@ -9,7 +9,7 @@ Describe 'Test Export-XmlFilter' {
         $script:TestXmlFullPath = Join-Path $TestXmlPath 'mailFilters.xml'
         Copy-Item -Path ..\mailFilters.xml -Destination $TestXmlPath
         
-        # Reimports 'GmailFilterUtil'.  If its not currently import just silently continue
+        # Reimports 'GmailFilterUtil'. If its not currently import just silently continue
         Remove-Module -Name 'GmailFilterUtil' -ErrorAction SilentlyContinue
         Import-Module $ModuleHome
 
@@ -33,7 +33,7 @@ Describe 'Test Export-XmlFilter' {
 
             $Filter = [GmailFilter]::new()
             $Filter.From = '*@kforce.com'
-            $Filter.Label = 'Nagg'
+            $Filter.Label = 'Recruiter'
 
             Export-XmlFilter -Path $script:TestXmlFullPath -Data $Filter
             
@@ -42,7 +42,7 @@ Describe 'Test Export-XmlFilter' {
             $FromResult | Should -Be '*@kforce.com'
 
             $LabelResult = (Select-Xml -xml $Results -Namespace ([GmailFilter]::AppsNameSpace) -XPath ([GmailFilter]::LabelXPath)).Node.Value
-            $LabelResult | Should -Be 'Nagg'
+            $LabelResult | Should -Be 'Recruiter'
         }
     }
 }

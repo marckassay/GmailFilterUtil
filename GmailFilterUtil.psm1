@@ -1,7 +1,6 @@
-using module .\src\list\New-FromList.ps1
+using module .\src\list\Set-FromList.ps1
 using module .\src\xml\Export-XmlFilter.ps1
 using module .\src\xml\Import-XmlFilter.ps1
-using module .\src\xml\New-XmlFilter.ps1
 
 Param(
     [Parameter(Mandatory = $False)]

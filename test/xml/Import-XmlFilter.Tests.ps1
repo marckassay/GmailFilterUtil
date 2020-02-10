@@ -2,7 +2,7 @@ Describe 'Test Import-XmlFilter' {
     BeforeAll {
         $ModuleHome = $script:PSCommandPath | Split-Path -Parent | Split-Path -Parent | Split-Path -Parent
 
-        # Reimports 'GmailFilterUtil'.  If its not currently import just silently continue
+        # Reimports 'GmailFilterUtil'. If its not currently import just silently continue
         Remove-Module -Name 'GmailFilterUtil' -ErrorAction SilentlyContinue
         Import-Module $ModuleHome
 
