@@ -1,6 +1,6 @@
 using module ..\xml\GmailFilter.psm1
 
-function Set-FromList {
+function Add-FromList {
     [CmdletBinding(
         DefaultParameterSetName = "ByValue",
         PositionalBinding = $true
@@ -31,11 +31,22 @@ function Set-FromList {
     )
 
     end {
-        # since this is set versus add, clear the existing data. this behavior replicates PS's
-        # Add-Content and Set-Content functions
-        $Data.From = ''
-        
-        $SortedValue = $Value | Sort-Object | Select-Object -Unique
+        $NewString = $Value | ForEach-Object -Begin { $script:Index = 0 } {
+            if ($script:Index -eq 0) {
+                "$_"
+            }
+            else {
+                "OR $_"
+            }
+            $script:Index++
+        } -End { Write-Verbose "The total number of new entries for the From list is '$script:Index'." }
+
+        if ($Data.From.length -ne 0) {
+            $NewString = $Data.From + " OR " + $NewString
+        }
+
+        $SortedValue = $NewString.Split(' OR ') | Sort-Object | Select-Object -Unique
+
         $Data.From = $SortedValue | ForEach-Object -Begin { $script:Index = 0 } {
             if ($script:Index -eq 0) {
                 "$_"
