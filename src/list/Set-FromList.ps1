@@ -10,8 +10,7 @@ function Set-FromList {
         [Parameter(
             Mandatory = $true,
             ParameterSetName = "ByValue",
-            ValueFromPipeline = $false,
-            ValueFromPipelineByPropertyName = $false,
+            ValueFromPipeline = $true,
             Position = 0
         )]
         [ValidateNotNull()]
@@ -22,7 +21,6 @@ function Set-FromList {
             Mandatory = $true,
             ParameterSetName = "ByValue",
             ValueFromPipeline = $false,
-            ValueFromPipelineByPropertyName = $false,
             Position = 1
         )]
         [ValidateNotNull()]

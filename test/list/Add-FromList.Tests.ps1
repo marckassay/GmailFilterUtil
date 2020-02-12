@@ -22,12 +22,23 @@ Describe 'Test Add-FromList' {
         }
     }
 
-    Context 'Adding From list' {
+    Context 'Adding to From list using parameter' {
         It 'Should have sorted entries and add them to existing list' {
             
             $Results = Add-FromList -Data $script:Data -Value "*@kavaliro", "*@tcs.com", "*@apexsystems.com"
-            Write-Host $Results.From
-            Write-Host '*@apexsystems.com OR *@hays.com" OR *@kavaliro OR *@koltersolutions.com OR *@tcs.com OR *@teksystems.com'
+            $Results.From | Should -Be '*@apexsystems.com OR *@hays.com OR *@kavaliro OR *@koltersolutions.com OR *@tcs.com OR *@teksystems.com'
+        }
+    }
+
+    Context 'Adding to From list using pipeline' {
+        It 'Should have sorted entries and add them to existing list' {
+            
+            $Results = $script:Data | Add-FromList -Value "*@kavaliro", "*@tcs.com", "*@apexsystems.com"
+            $Results.From | Should -Be '*@apexsystems.com OR *@hays.com OR *@kavaliro OR *@koltersolutions.com OR *@tcs.com OR *@teksystems.com'
+
+            # verify that name for varible is irrelivent
+            $X = $script:Data
+            $Results = $X | Add-FromList -Value "*@kavaliro", "*@tcs.com", "*@apexsystems.com"
             $Results.From | Should -Be '*@apexsystems.com OR *@hays.com OR *@kavaliro OR *@koltersolutions.com OR *@tcs.com OR *@teksystems.com'
         }
     }

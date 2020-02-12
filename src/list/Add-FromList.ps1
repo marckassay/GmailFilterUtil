@@ -10,8 +10,7 @@ function Add-FromList {
         [Parameter(
             Mandatory = $true,
             ParameterSetName = "ByValue",
-            ValueFromPipeline = $false,
-            ValueFromPipelineByPropertyName = $false,
+            ValueFromPipeline = $true,
             Position = 0
         )]
         [ValidateNotNull()]
@@ -22,7 +21,6 @@ function Add-FromList {
             Mandatory = $true,
             ParameterSetName = "ByValue",
             ValueFromPipeline = $false,
-            ValueFromPipelineByPropertyName = $false,
             Position = 1
         )]
         [ValidateNotNull()]
@@ -31,22 +29,12 @@ function Add-FromList {
     )
 
     end {
-        $NewString = $Value | ForEach-Object -Begin { $script:Index = 0 } {
-            if ($script:Index -eq 0) {
-                "$_"
-            }
-            else {
-                "OR $_"
-            }
-            $script:Index++
-        } -End { Write-Verbose "The total number of new entries for the From list is '$script:Index'." }
 
-        if ($Data.From.length -ne 0) {
-            $NewString = $Data.From + " OR " + $NewString
+        if ($Data.From.length -gt 0) {
+            $Value += $Data.From.Split(' OR ')
         }
 
-        $SortedValue = $NewString.Split(' OR ') | Sort-Object | Select-Object -Unique
-
+        $SortedValue = $Value | Sort-Object | Select-Object -Unique
         $Data.From = $SortedValue | ForEach-Object -Begin { $script:Index = 0 } {
             if ($script:Index -eq 0) {
                 "$_"

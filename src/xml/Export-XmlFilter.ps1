@@ -10,24 +10,22 @@ function Export-XmlFilter {
         [Parameter(
             Mandatory = $true,
             ParameterSetName = "ByPath",
-            ValueFromPipeline = $false,
-            ValueFromPipelineByPropertyName = $false,
+            ValueFromPipeline = $true,
             Position = 0
         )]
         [ValidateNotNull()]
-        [string[]]
-        $Path,
+        [GmailFilter]
+        $Data,
 
         [Parameter(
             Mandatory = $true,
-            ParameterSetName = "ParameterSetName",
-            ValueFromPipeline = $true,
-            ValueFromPipelineByPropertyName = $true,
+            ParameterSetName = "ByPath",
+            ValueFromPipeline = $false,
             Position = 1
         )]
         [ValidateNotNull()]
-        [GmailFilter]
-        $Data
+        [string[]]
+        $Path
     )
     
     end {
