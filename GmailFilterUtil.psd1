@@ -72,6 +72,7 @@
     FunctionsToExport = @(
         'Add-FromList',
         'Export-XmlFilter',
+        'Get-FromList',
         'Import-XmlFilter',
         'Set-FromList'
     )
