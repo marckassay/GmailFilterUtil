@@ -69,7 +69,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (<http://go.microsoft.com/fwlink/?LinkID=113216).>
 
 ## INPUTS
 
@@ -82,6 +82,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+[Get-FromList.ps1](https://github.com/marckassay/GmailFilterUtil/blob/0.0.1/src/list/Get-FromList.ps1)
 
-[`Set-FromList`](https://github.com/marckassay/GmailFilterUtil/blob/master/docs/Set-FromList.md)
-[`Add-FromList`](https://github.com/marckassay/GmailFilterUtil/blob/master/docs/Add-FromList.md)
+[Get-FromList.Tests.ps1](https://github.com/marckassay/GmailFilterUtil/blob/0.0.1/test/list/Get-FromList.Tests.ps1)
+
+[`Set-FromList`](https://github.com/marckassay/GmailFilterUtil/blob/0.0.1/docs/Set-FromList.md)
+
+[`Add-FromList`](https://github.com/marckassay/GmailFilterUtil/blob/0.0.1/docs/Add-FromList.md)

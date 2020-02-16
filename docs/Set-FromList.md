@@ -79,5 +79,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[`Get-FromList`](https://github.com/marckassay/GmailFilterUtil/blob/master/docs/Get-FromList.md)
-[`Add-FromList`](https://github.com/marckassay/GmailFilterUtil/blob/master/docs/Add-FromList.md)
+[Set-FromList.ps1](https://github.com/marckassay/GmailFilterUtil/blob/0.0.1/src/list/Set-FromList.ps1)
+
+[Set-FromList.Tests.ps1](https://github.com/marckassay/GmailFilterUtil/blob/0.0.1/test/list/Set-FromList.Tests.ps1)
+
+[`Get-FromList`](https://github.com/marckassay/GmailFilterUtil/blob/0.0.1/docs/Get-FromList.md)
+
+[`Add-FromList`](https://github.com/marckassay/GmailFilterUtil/blob/0.0.1/docs/Add-FromList.md)

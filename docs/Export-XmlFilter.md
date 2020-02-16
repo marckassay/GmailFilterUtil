@@ -87,5 +87,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+[Export-XmlFilter.ps1](https://github.com/marckassay/GmailFilterUtil/blob/0.0.1/src/xml/Export-XmlFilter.ps1)
 
-[`Import-XmlFilter`](https://github.com/marckassay/GmailFilterUtil/blob/master/docs/Import-XmlFilter.md)
+[Export-XmlFilter.Tests.ps1](https://github.com/marckassay/GmailFilterUtil/blob/0.0.1/test/xml/Export-XmlFilter.Tests.ps1)
+
+[`Import-XmlFilter`](https://github.com/marckassay/GmailFilterUtil/blob/0.0.1/docs/Import-XmlFilter.md)

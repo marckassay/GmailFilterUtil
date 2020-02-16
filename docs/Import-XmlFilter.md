@@ -49,7 +49,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (<http://go.microsoft.com/fwlink/?LinkID=113216).>
 
 ## INPUTS
 
@@ -62,5 +62,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+[Import-XmlFilter.ps1](https://github.com/marckassay/GmailFilterUtil/blob/0.0.1/src/xml/Import-XmlFilter.ps1)
 
-[`Export-XmlFilter`](https://github.com/marckassay/GmailFilterUtil/blob/master/docs/Export-XmlFilter.md)
+[Import-XmlFilter.Tests.ps1](https://github.com/marckassay/GmailFilterUtil/blob/0.0.1/test/xml/Import-XmlFilter.Tests.ps1)
+
+[`Export-XmlFilter`](https://github.com/marckassay/GmailFilterUtil/blob/0.0.1/docs/Export-XmlFilter.md)

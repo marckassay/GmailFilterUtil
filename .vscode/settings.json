@@ -1,0 +1,21 @@
+{
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true,
+    "source.organizeImports": true
+  },
+  "editor.formatOnSave": true,
+  "editor.rulers": [
+    140
+  ],
+  "files.autoSave": "off",
+  "files.eol": "\n",
+  "markdownlint.config": {
+    "MD014": false,
+    "MD022": false,
+    "MD033": false
+  },
+  "markdown.styles": [
+    "tools\\dev\\vscode-readme.css"
+  ],
+  "workbench.settings.editor": "json"
+}
