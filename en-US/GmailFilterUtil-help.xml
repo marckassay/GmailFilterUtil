@@ -105,15 +105,23 @@ Import-XmlFilter -Path 'E:\temp\mailFilters.xml' | Add-FromList -Value "*@aerote
     <command:relatedLinks>
       <maml:navigationLink>
         <maml:linkText>Online Version:</maml:linkText>
-        <maml:uri>https://github.com/marckassay/GmailFilterUtil/blob/master/docs/Add-FromList.md</maml:uri>
+        <maml:uri>https://github.com/marckassay/GmailFilterUtil/blob/0.0.2/docs/Add-FromList.md</maml:uri>
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>Add-FromList.ps1</maml:linkText>
+        <maml:uri>https://github.com/marckassay/GmailFilterUtil/blob/0.0.2/src/list/Add-FromList.ps1</maml:uri>
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>Add-FromList.Tests.ps1</maml:linkText>
+        <maml:uri>https://github.com/marckassay/GmailFilterUtil/blob/0.0.2/test/list/Add-FromList.Tests.ps1</maml:uri>
       </maml:navigationLink>
       <maml:navigationLink>
         <maml:linkText>`Set-FromList`</maml:linkText>
-        <maml:uri>https://github.com/marckassay/GmailFilterUtil/blob/master/docs/Set-FromList.md</maml:uri>
+        <maml:uri>https://github.com/marckassay/GmailFilterUtil/blob/0.0.2/docs/Set-FromList.md</maml:uri>
       </maml:navigationLink>
       <maml:navigationLink>
         <maml:linkText>`Get-FromList`</maml:linkText>
-        <maml:uri>https://github.com/marckassay/GmailFilterUtil/blob/master/docs/Get-FromList.md</maml:uri>
+        <maml:uri>https://github.com/marckassay/GmailFilterUtil/blob/0.0.2/docs/Get-FromList.md</maml:uri>
       </maml:navigationLink>
     </command:relatedLinks>
   </command:command>
@@ -127,7 +135,7 @@ Import-XmlFilter -Path 'E:\temp\mailFilters.xml' | Add-FromList -Value "*@aerote
       </maml:description>
     </command:details>
     <maml:description>
-      <maml:para>Exports `GmailFilter` data back into a Xml Gmail filter.</maml:para>
+      <maml:para>Exports `GmailFilter` data back into a Xml Gmail filter. Instructions from Google on how to export filters, see this link (https://support.google.com/mail/answer/6579#).</maml:para>
     </maml:description>
     <command:syntax>
       <command:syntaxItem>
@@ -224,11 +232,19 @@ Export-XmlFilter -Data $NewList -Path 'E:\temp\mailFilters.xml'</dev:code>
     <command:relatedLinks>
       <maml:navigationLink>
         <maml:linkText>Online Version:</maml:linkText>
-        <maml:uri>https://github.com/marckassay/GmailFilterUtil/blob/master/docs/Export-XmlFilter.md</maml:uri>
+        <maml:uri>https://github.com/marckassay/GmailFilterUtil/blob/0.0.2/docs/Export-XmlFilter.md</maml:uri>
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>Export-XmlFilter.ps1</maml:linkText>
+        <maml:uri>https://github.com/marckassay/GmailFilterUtil/blob/0.0.2/src/xml/Export-XmlFilter.ps1</maml:uri>
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>Export-XmlFilter.Tests.ps1</maml:linkText>
+        <maml:uri>https://github.com/marckassay/GmailFilterUtil/blob/0.0.2/test/xml/Export-XmlFilter.Tests.ps1</maml:uri>
       </maml:navigationLink>
       <maml:navigationLink>
         <maml:linkText>`Import-XmlFilter`</maml:linkText>
-        <maml:uri>https://github.com/marckassay/GmailFilterUtil/blob/master/docs/Import-XmlFilter.md</maml:uri>
+        <maml:uri>https://github.com/marckassay/GmailFilterUtil/blob/0.0.2/docs/Import-XmlFilter.md</maml:uri>
       </maml:navigationLink>
     </command:relatedLinks>
   </command:command>
@@ -341,15 +357,23 @@ Export-XmlFilter -Data $NewList -Path 'E:\temp\mailFilters.xml'</dev:code>
     <command:relatedLinks>
       <maml:navigationLink>
         <maml:linkText>Online Version:</maml:linkText>
-        <maml:uri>https://github.com/marckassay/GmailFilterUtil/blob/master/docs/Get-FromList.md</maml:uri>
+        <maml:uri>https://github.com/marckassay/GmailFilterUtil/blob/0.0.2/docs/Get-FromList.md</maml:uri>
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>Get-FromList.ps1</maml:linkText>
+        <maml:uri>https://github.com/marckassay/GmailFilterUtil/blob/0.0.2/src/list/Get-FromList.ps1</maml:uri>
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>Get-FromList.Tests.ps1</maml:linkText>
+        <maml:uri>https://github.com/marckassay/GmailFilterUtil/blob/0.0.2/test/list/Get-FromList.Tests.ps1</maml:uri>
       </maml:navigationLink>
       <maml:navigationLink>
         <maml:linkText>`Set-FromList`</maml:linkText>
-        <maml:uri>https://github.com/marckassay/GmailFilterUtil/blob/master/docs/Set-FromList.md</maml:uri>
+        <maml:uri>https://github.com/marckassay/GmailFilterUtil/blob/0.0.2/docs/Set-FromList.md</maml:uri>
       </maml:navigationLink>
       <maml:navigationLink>
         <maml:linkText>`Add-FromList`</maml:linkText>
-        <maml:uri>https://github.com/marckassay/GmailFilterUtil/blob/master/docs/Add-FromList.md</maml:uri>
+        <maml:uri>https://github.com/marckassay/GmailFilterUtil/blob/0.0.2/docs/Add-FromList.md</maml:uri>
       </maml:navigationLink>
     </command:relatedLinks>
   </command:command>
@@ -363,7 +387,7 @@ Export-XmlFilter -Data $NewList -Path 'E:\temp\mailFilters.xml'</dev:code>
       </maml:description>
     </command:details>
     <maml:description>
-      <maml:para>Imports an Xml Gmail filter and parses that data into PowerShell datatype of `GmailFilter`.</maml:para>
+      <maml:para>Imports an Xml Gmail filter and parses that data into PowerShell datatype of `GmailFilter`.  Instructions from Google on how to import filters, see this link (https://support.google.com/mail/answer/6579#)</maml:para>
     </maml:description>
     <command:syntax>
       <command:syntaxItem>
@@ -433,11 +457,19 @@ Export-XmlFilter -Data $NewList -Path 'E:\temp\mailFilters.xml'</dev:code>
     <command:relatedLinks>
       <maml:navigationLink>
         <maml:linkText>Online Version:</maml:linkText>
-        <maml:uri>https://github.com/marckassay/GmailFilterUtil/blob/master/docs/Import-XmlFilter.md</maml:uri>
+        <maml:uri>https://github.com/marckassay/GmailFilterUtil/blob/0.0.2/docs/Import-XmlFilter.md</maml:uri>
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>Import-XmlFilter.ps1</maml:linkText>
+        <maml:uri>https://github.com/marckassay/GmailFilterUtil/blob/0.0.2/src/xml/Import-XmlFilter.ps1</maml:uri>
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>Import-XmlFilter.Tests.ps1</maml:linkText>
+        <maml:uri>https://github.com/marckassay/GmailFilterUtil/blob/0.0.2/test/xml/Import-XmlFilter.Tests.ps1</maml:uri>
       </maml:navigationLink>
       <maml:navigationLink>
         <maml:linkText>`Export-XmlFilter`</maml:linkText>
-        <maml:uri>https://github.com/marckassay/GmailFilterUtil/blob/master/docs/Export-XmlFilter.md</maml:uri>
+        <maml:uri>https://github.com/marckassay/GmailFilterUtil/blob/0.0.2/docs/Export-XmlFilter.md</maml:uri>
       </maml:navigationLink>
     </command:relatedLinks>
   </command:command>
@@ -545,15 +577,23 @@ Export-XmlFilter -Data $NewList -Path 'E:\temp\mailFilters.xml'</dev:code>
     <command:relatedLinks>
       <maml:navigationLink>
         <maml:linkText>Online Version:</maml:linkText>
-        <maml:uri>https://github.com/marckassay/GmailFilterUtil/blob/master/docs/Set-FromList.md</maml:uri>
+        <maml:uri>https://github.com/marckassay/GmailFilterUtil/blob/0.0.2/docs/Set-FromList.md</maml:uri>
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>Set-FromList.ps1</maml:linkText>
+        <maml:uri>https://github.com/marckassay/GmailFilterUtil/blob/0.0.2/src/list/Set-FromList.ps1</maml:uri>
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>Set-FromList.Tests.ps1</maml:linkText>
+        <maml:uri>https://github.com/marckassay/GmailFilterUtil/blob/0.0.2/test/list/Set-FromList.Tests.ps1</maml:uri>
       </maml:navigationLink>
       <maml:navigationLink>
         <maml:linkText>`Get-FromList`</maml:linkText>
-        <maml:uri>https://github.com/marckassay/GmailFilterUtil/blob/master/docs/Get-FromList.md</maml:uri>
+        <maml:uri>https://github.com/marckassay/GmailFilterUtil/blob/0.0.2/docs/Get-FromList.md</maml:uri>
       </maml:navigationLink>
       <maml:navigationLink>
         <maml:linkText>`Add-FromList`</maml:linkText>
-        <maml:uri>https://github.com/marckassay/GmailFilterUtil/blob/master/docs/Add-FromList.md</maml:uri>
+        <maml:uri>https://github.com/marckassay/GmailFilterUtil/blob/0.0.2/docs/Add-FromList.md</maml:uri>
       </maml:navigationLink>
     </command:relatedLinks>
   </command:command>

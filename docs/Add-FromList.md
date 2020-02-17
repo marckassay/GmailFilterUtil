@@ -1,7 +1,7 @@
 ---
 external help file: GmailFilterUtil-help.xml
 Module Name: GmailFilterUtil
-online version: https://github.com/marckassay/GmailFilterUtil/blob/master/docs/Add-FromList.md
+online version: https://github.com/marckassay/GmailFilterUtil/blob/0.0.2/docs/Add-FromList.md
 schema: 2.0.0
 ---
 
@@ -66,7 +66,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (<http://go.microsoft.com/fwlink/?LinkID=113216).>
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -79,10 +79,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-[Add-FromList.ps1](https://github.com/marckassay/GmailFilterUtil/blob/0.0.1/src/list/Add-FromList.ps1)
 
-[Add-FromList.Tests.ps1](https://github.com/marckassay/GmailFilterUtil/blob/0.0.1/test/list/Add-FromList.Tests.ps1)
+[Add-FromList.ps1](https://github.com/marckassay/GmailFilterUtil/blob/0.0.2/src/list/Add-FromList.ps1)
 
-[`Set-FromList`](https://github.com/marckassay/GmailFilterUtil/blob/0.0.1/docs/Set-FromList.md)
+[Add-FromList.Tests.ps1](https://github.com/marckassay/GmailFilterUtil/blob/0.0.2/test/list/Add-FromList.Tests.ps1)
 
-[`Get-FromList`](https://github.com/marckassay/GmailFilterUtil/blob/0.0.1/docs/Get-FromList.md)
+[`Set-FromList`](https://github.com/marckassay/GmailFilterUtil/blob/0.0.2/docs/Set-FromList.md)
+
+[`Get-FromList`](https://github.com/marckassay/GmailFilterUtil/blob/0.0.2/docs/Get-FromList.md)
