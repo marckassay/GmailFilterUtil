@@ -1,10 +1,10 @@
 # GmailFilterUtil
 
-This module has been created address the following:
+This module has been created to address the following:
 
 - _Unable to edit large filter lists in Gmail_. It seems that Gmail doesn't allow editing large filter sets without receiving an error popup. For whatever reason why this is, I "quickly" created this module because of it.
 - _Quickly update Gmail filter list_. Although, this requires additional steps to be done in Gmail, this module allows you to update your local Xml filter file to be uploaded anytime afterwards. Use the [`Add-FromList`](https://github.com/marckassay/GmailFilterUtil/blob/0.0.3/docs/Add-FromList.md) function to add new entries.
-- _To have predefined Gmail filter lists_. From the plethora of recruiters contacting me, I found myself inundated to the point I was avoiding to view my inbox. Filters are a powerful tool in Gmail, so that you can avoid even seeing or needing to delete messages, which is what I needed to filter recruiter messages. Having predefined lists makes enabling this process much less painful.
+- _To have predefined Gmail filter lists_. From the plethora of recruiters contacting me, I found myself inundated to the point I was avoiding to view my inbox. Filters are a powerful tool in Gmail, so that you can avoid even seeing or needing to delete messages, which is what I needed to filter recruiter messages. Having predefined lists makes enabling this process much less painful. Submit a PR to update or add new lists!
 
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/marckassay/GmailFilterUtil/blob/0.0.3/LICENSE)
 [![PS Gallery](https://img.shields.io/badge/install-PS%20Gallery-blue.svg)](https://www.powershellgallery.com/packages/GmailFilterUtil/)
