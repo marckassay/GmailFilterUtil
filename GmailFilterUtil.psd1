@@ -12,7 +12,7 @@
     RootModule        = 'GmailFilterUtil.psm1'
 
     # Version number of this module.
-    ModuleVersion = '0.0.2'
+    ModuleVersion = '0.0.3'
 
     # Supported PSEditions
     # CompatiblePSEditions = @()
@@ -30,7 +30,7 @@
     Copyright         = '(c) Marc Kassay. All rights reserved.'
 
     # Description of the functionality provided by this module
-    # Description = ''
+    Description       = 'A PowerShell module for updating Gmail filters'
 
     # Minimum version of the PowerShell engine required by this module
     PowerShellVersion = '6.0'
@@ -104,10 +104,10 @@
             Tags       = @('Gmail', 'filter', 'recruiter', 'headhunter')
 
             # A URL to the license for this module.
-            LicenseUri = 'https://github.com/marckassay/GmailFilterUtil/tree/0.0.2/LICENSE'
+            LicenseUri = 'https://github.com/marckassay/GmailFilterUtil/tree/0.0.3/LICENSE'
 
             # A URL to the main website for this project.
-            # ProjectUri = ''
+            ProjectUri = 'https://github.com/marckassay/GmailFilterUtil/tree/0.0.3/'
 
             # A URL to an icon representing this module.
             # IconUri = ''
@@ -129,7 +129,7 @@
     } # End of PrivateData hashtable
 
     # HelpInfo URI of this module
-    HelpInfoURI = 'https://github.com/marckassay/GmailFilterUtil/tree/0.0.2'
+    HelpInfoURI = 'https://github.com/marckassay/GmailFilterUtil/tree/0.0.3'
 
     # Default prefix for commands exported from this module. Override the default prefix using Import-Module -Prefix.
     # DefaultCommandPrefix = ''

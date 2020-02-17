@@ -1,7 +1,7 @@
 ---
 external help file: GmailFilterUtil-help.xml
 Module Name: GmailFilterUtil
-online version: https://github.com/marckassay/GmailFilterUtil/blob/0.0.2/docs/Import-XmlFilter.md
+online version: https://github.com/marckassay/GmailFilterUtil/blob/0.0.3/docs/Import-XmlFilter.md
 schema: 2.0.0
 ---
 
@@ -63,8 +63,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Import-XmlFilter.ps1](https://github.com/marckassay/GmailFilterUtil/blob/0.0.2/src/xml/Import-XmlFilter.ps1)
+[Import-XmlFilter.ps1](https://github.com/marckassay/GmailFilterUtil/blob/0.0.3/src/xml/Import-XmlFilter.ps1)
 
-[Import-XmlFilter.Tests.ps1](https://github.com/marckassay/GmailFilterUtil/blob/0.0.2/test/xml/Import-XmlFilter.Tests.ps1)
+[Import-XmlFilter.Tests.ps1](https://github.com/marckassay/GmailFilterUtil/blob/0.0.3/test/xml/Import-XmlFilter.Tests.ps1)
 
-[`Export-XmlFilter`](https://github.com/marckassay/GmailFilterUtil/blob/0.0.2/docs/Export-XmlFilter.md)
+[`Export-XmlFilter`](https://github.com/marckassay/GmailFilterUtil/blob/0.0.3/docs/Export-XmlFilter.md)
