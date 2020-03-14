@@ -1,5 +1,6 @@
 *@4cornerresources.com
 *@aalgorithm.com
+*@acsicorp.com
 *@aditiconsulting.com
 *@aerotek.com
 *@aesinc.us.com
@@ -12,6 +13,7 @@
 *@applicantstack.com
 *@aptask.com
 *@artech.com
+*@arthurgrand.com
 *@arthurlawrence.net
 *@avanceservices.us
 *@brainbeeus.com
@@ -33,6 +35,7 @@
 *@droisys.com
 *@dtglobalstaffing.com
 *@eateam.com
+*@edoorsinc.com
 *@email.nexxt.com
 *@enterprisesolutioninc.com
 *@e-solutionsinc.com
@@ -44,12 +47,14 @@
 *@hays.com
 *@hirebridgemail.com
 *@iconma.com
+*@idctechnologies.com
 *@idexcel.com
 *@idtechnologies.com
 *@iic.com
 *@infinity-cs.com
 *@insightglobal.com
 *@invalidemail.com
+*@iplaceusa.com
 *@irtalent.com
 *@iserveworld.com
 *@itresourcescorp.com
@@ -64,6 +69,7 @@
 *@kforce.com
 *@kimblegroup.com
 *@koltersolutions.com
+*@krgtech.com
 *@latitudeinc.net
 *@lenmarit.com
 *@mail.pageuppeople.com
@@ -89,8 +95,10 @@
 *@rht.com
 *@roseit.com
 *@rsrit.com
+*@rwaltz.com
 *@saiconinc.biz
 *@saxonglobal.com
+*@servstaffing.com
 *@sgainc.com
 *@sgsconsulting.com
 *@silversearchinc.com
@@ -107,6 +115,7 @@
 *@tekfortune.com
 *@teksystems.com
 *@tgtus.com
+*@tietoevry.com
 *@transcend-staffing.com
 *@tridentconsultinginc.com
 *@ussisolutions.com
@@ -114,6 +123,7 @@
 *@vaco.com
 *@vdartinc.com
 *@vinalistaffing.com
+*@vlinkinfo.com
 *@zip.1.0.sparkpostmail.com
 *@ziprecruiter.com
 do-not-reply@stackoverflow.com
