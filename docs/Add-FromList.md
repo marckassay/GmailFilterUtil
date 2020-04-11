@@ -1,7 +1,7 @@
 ---
 external help file: GmailFilterUtil-help.xml
 Module Name: GmailFilterUtil
-online version: https://github.com/marckassay/GmailFilterUtil/blob/0.0.3/docs/Add-FromList.md
+online version: https://github.com/marckassay/GmailFilterUtil/blob/0.0.4/docs/Add-FromList.md
 schema: 2.0.0
 ---
 
@@ -13,7 +13,7 @@ Adds entries to a From list.
 ## SYNTAX
 
 ```
-Add-FromList [-Data] <GmailFilter> [-Value] <String[]> [<CommonParameters>]
+Add-FromList -GmailFilter <GmailFilter> [-Value] <String[]> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -33,22 +33,6 @@ Imports Xml filter from a Gmail account, adds an entry with wildcard for recipie
 
 ## PARAMETERS
 
-### -Data
-
-GmailFilter type. This data can be retrieved by `Import-XmlFilter` and `Get-FromList`.
-
-```yaml
-Type: GmailFilter
-Parameter Sets: (All)
-Aliases:
-
-Required: True
-Position: 0
-Default value: None
-Accept pipeline input: True (ByValue)
-Accept wildcard characters: False
-```
-
 ### -Value
 
 An entry to be add to the 'From' Gmail filter field.
@@ -62,6 +46,21 @@ Required: True
 Position: 1
 Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -GmailFilter
+{{Fill GmailFilter Description}}
+
+```yaml
+Type: GmailFilter
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
@@ -80,10 +79,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Add-FromList.ps1](https://github.com/marckassay/GmailFilterUtil/blob/0.0.3/src/list/Add-FromList.ps1)
+[Add-FromList.ps1](https://github.com/marckassay/GmailFilterUtil/blob/0.0.4/src/list/Add-FromList.ps1)
 
-[Add-FromList.Tests.ps1](https://github.com/marckassay/GmailFilterUtil/blob/0.0.3/test/list/Add-FromList.Tests.ps1)
+[Add-FromList.Tests.ps1](https://github.com/marckassay/GmailFilterUtil/blob/0.0.4/test/list/Add-FromList.Tests.ps1)
 
-[`Set-FromList`](https://github.com/marckassay/GmailFilterUtil/blob/0.0.3/docs/Set-FromList.md)
+[`Set-FromList`](https://github.com/marckassay/GmailFilterUtil/blob/0.0.4/docs/Set-FromList.md)
 
-[`Get-FromList`](https://github.com/marckassay/GmailFilterUtil/blob/0.0.3/docs/Get-FromList.md)
+[`Get-FromList`](https://github.com/marckassay/GmailFilterUtil/blob/0.0.4/docs/Get-FromList.md)

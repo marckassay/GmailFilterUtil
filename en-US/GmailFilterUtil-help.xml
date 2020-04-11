@@ -15,18 +15,6 @@
     <command:syntax>
       <command:syntaxItem>
         <maml:name>Add-FromList</maml:name>
-        <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="True (ByValue)" position="0" aliases="none">
-          <maml:name>Data</maml:name>
-          <maml:Description>
-            <maml:para>GmailFilter type. This data can be retrieved by `Import-XmlFilter` and `Get-FromList`.</maml:para>
-          </maml:Description>
-          <command:parameterValue required="true" variableLength="false">GmailFilter</command:parameterValue>
-          <dev:type>
-            <maml:name>GmailFilter</maml:name>
-            <maml:uri />
-          </dev:type>
-          <dev:defaultValue>None</dev:defaultValue>
-        </command:parameter>
         <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="1" aliases="none">
           <maml:name>Value</maml:name>
           <maml:Description>
@@ -39,21 +27,21 @@
           </dev:type>
           <dev:defaultValue>None</dev:defaultValue>
         </command:parameter>
+        <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="True (ByValue)" position="named" aliases="none">
+          <maml:name>GmailFilter</maml:name>
+          <maml:Description>
+            <maml:para>{{Fill GmailFilter Description}}</maml:para>
+          </maml:Description>
+          <command:parameterValue required="true" variableLength="false">GmailFilter</command:parameterValue>
+          <dev:type>
+            <maml:name>GmailFilter</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
       </command:syntaxItem>
     </command:syntax>
     <command:parameters>
-      <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="True (ByValue)" position="0" aliases="none">
-        <maml:name>Data</maml:name>
-        <maml:Description>
-          <maml:para>GmailFilter type. This data can be retrieved by `Import-XmlFilter` and `Get-FromList`.</maml:para>
-        </maml:Description>
-        <command:parameterValue required="true" variableLength="false">GmailFilter</command:parameterValue>
-        <dev:type>
-          <maml:name>GmailFilter</maml:name>
-          <maml:uri />
-        </dev:type>
-        <dev:defaultValue>None</dev:defaultValue>
-      </command:parameter>
       <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="1" aliases="none">
         <maml:name>Value</maml:name>
         <maml:Description>
@@ -62,6 +50,18 @@
         <command:parameterValue required="true" variableLength="false">String[]</command:parameterValue>
         <dev:type>
           <maml:name>String[]</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="True (ByValue)" position="named" aliases="none">
+        <maml:name>GmailFilter</maml:name>
+        <maml:Description>
+          <maml:para>{{Fill GmailFilter Description}}</maml:para>
+        </maml:Description>
+        <command:parameterValue required="true" variableLength="false">GmailFilter</command:parameterValue>
+        <dev:type>
+          <maml:name>GmailFilter</maml:name>
           <maml:uri />
         </dev:type>
         <dev:defaultValue>None</dev:defaultValue>
@@ -105,23 +105,23 @@ Import-XmlFilter -Path 'E:\temp\mailFilters.xml' | Add-FromList -Value "*@aerote
     <command:relatedLinks>
       <maml:navigationLink>
         <maml:linkText>Online Version:</maml:linkText>
-        <maml:uri>https://github.com/marckassay/GmailFilterUtil/blob/0.0.3/docs/Add-FromList.md</maml:uri>
+        <maml:uri>https://github.com/marckassay/GmailFilterUtil/blob/0.0.4/docs/Add-FromList.md</maml:uri>
       </maml:navigationLink>
       <maml:navigationLink>
         <maml:linkText>Add-FromList.ps1</maml:linkText>
-        <maml:uri>https://github.com/marckassay/GmailFilterUtil/blob/0.0.3/src/list/Add-FromList.ps1</maml:uri>
+        <maml:uri>https://github.com/marckassay/GmailFilterUtil/blob/0.0.4/src/list/Add-FromList.ps1</maml:uri>
       </maml:navigationLink>
       <maml:navigationLink>
         <maml:linkText>Add-FromList.Tests.ps1</maml:linkText>
-        <maml:uri>https://github.com/marckassay/GmailFilterUtil/blob/0.0.3/test/list/Add-FromList.Tests.ps1</maml:uri>
+        <maml:uri>https://github.com/marckassay/GmailFilterUtil/blob/0.0.4/test/list/Add-FromList.Tests.ps1</maml:uri>
       </maml:navigationLink>
       <maml:navigationLink>
         <maml:linkText>`Set-FromList`</maml:linkText>
-        <maml:uri>https://github.com/marckassay/GmailFilterUtil/blob/0.0.3/docs/Set-FromList.md</maml:uri>
+        <maml:uri>https://github.com/marckassay/GmailFilterUtil/blob/0.0.4/docs/Set-FromList.md</maml:uri>
       </maml:navigationLink>
       <maml:navigationLink>
         <maml:linkText>`Get-FromList`</maml:linkText>
-        <maml:uri>https://github.com/marckassay/GmailFilterUtil/blob/0.0.3/docs/Get-FromList.md</maml:uri>
+        <maml:uri>https://github.com/marckassay/GmailFilterUtil/blob/0.0.4/docs/Get-FromList.md</maml:uri>
       </maml:navigationLink>
     </command:relatedLinks>
   </command:command>
@@ -232,29 +232,125 @@ Export-XmlFilter -Data $NewList -Path 'E:\temp\mailFilters.xml'</dev:code>
     <command:relatedLinks>
       <maml:navigationLink>
         <maml:linkText>Online Version:</maml:linkText>
-        <maml:uri>https://github.com/marckassay/GmailFilterUtil/blob/0.0.3/docs/Export-XmlFilter.md</maml:uri>
+        <maml:uri>https://github.com/marckassay/GmailFilterUtil/blob/0.0.4/docs/Export-XmlFilter.md</maml:uri>
       </maml:navigationLink>
       <maml:navigationLink>
         <maml:linkText>Export-XmlFilter.ps1</maml:linkText>
-        <maml:uri>https://github.com/marckassay/GmailFilterUtil/blob/0.0.3/src/xml/Export-XmlFilter.ps1</maml:uri>
+        <maml:uri>https://github.com/marckassay/GmailFilterUtil/blob/0.0.4/src/xml/Export-XmlFilter.ps1</maml:uri>
       </maml:navigationLink>
       <maml:navigationLink>
         <maml:linkText>Export-XmlFilter.Tests.ps1</maml:linkText>
-        <maml:uri>https://github.com/marckassay/GmailFilterUtil/blob/0.0.3/test/xml/Export-XmlFilter.Tests.ps1</maml:uri>
+        <maml:uri>https://github.com/marckassay/GmailFilterUtil/blob/0.0.4/test/xml/Export-XmlFilter.Tests.ps1</maml:uri>
       </maml:navigationLink>
       <maml:navigationLink>
         <maml:linkText>`Import-XmlFilter`</maml:linkText>
-        <maml:uri>https://github.com/marckassay/GmailFilterUtil/blob/0.0.3/docs/Import-XmlFilter.md</maml:uri>
+        <maml:uri>https://github.com/marckassay/GmailFilterUtil/blob/0.0.4/docs/Import-XmlFilter.md</maml:uri>
       </maml:navigationLink>
     </command:relatedLinks>
   </command:command>
   <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
     <command:details>
-      <command:name>Get-FromList</command:name>
-      <command:verb>Get</command:verb>
-      <command:noun>FromList</command:noun>
+      <command:name>Import-XmlFilter</command:name>
+      <command:verb>Import</command:verb>
+      <command:noun>XmlFilter</command:noun>
       <maml:description>
-        <maml:para>Get predefined list of string entries.</maml:para>
+        <maml:para>Imports into PowerShell session, a Gmail exported filter.</maml:para>
+      </maml:description>
+    </command:details>
+    <maml:description>
+      <maml:para>Imports an Xml Gmail filter and parses that data into PowerShell datatype of `GmailFilter`.  Instructions from Google on how to import filters, see this link (https://support.google.com/mail/answer/6579#)</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>Import-XmlFilter</maml:name>
+        <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="True (ByPropertyName, ByValue)" position="0" aliases="none">
+          <maml:name>Path</maml:name>
+          <maml:Description>
+            <maml:para>Path to the exported Gmail filter. This must be a Xml file from Gmail.</maml:para>
+          </maml:Description>
+          <command:parameterValue required="true" variableLength="false">String[]</command:parameterValue>
+          <dev:type>
+            <maml:name>String[]</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="True (ByPropertyName, ByValue)" position="0" aliases="none">
+        <maml:name>Path</maml:name>
+        <maml:Description>
+          <maml:para>Path to the exported Gmail filter. This must be a Xml file from Gmail.</maml:para>
+        </maml:Description>
+        <command:parameterValue required="true" variableLength="false">String[]</command:parameterValue>
+        <dev:type>
+          <maml:name>String[]</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <maml:name>System.String[]</maml:name>
+        </dev:type>
+        <maml:description>
+          <maml:para></maml:para>
+        </maml:description>
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <maml:name>GmailFilter</maml:name>
+        </dev:type>
+        <maml:description>
+          <maml:para></maml:para>
+        </maml:description>
+      </command:returnValue>
+    </command:returnValues>
+    <maml:alertSet>
+      <maml:alert>
+        <maml:para></maml:para>
+      </maml:alert>
+    </maml:alertSet>
+    <command:examples>
+      <command:example>
+        <maml:title>-------------------------- Example 1 --------------------------</maml:title>
+        <dev:code>PS C:\&gt; $Feed = Import-XmlFilter -Path 'C:\Users\marc\Downloads\mailFilters.xml'</dev:code>
+        <dev:remarks>
+          <maml:para>The default filename is `mailFilter` when exported out from Gmail. When downloaded, it can be found in the users download folder as this example shows.</maml:para>
+        </dev:remarks>
+      </command:example>
+    </command:examples>
+    <command:relatedLinks>
+      <maml:navigationLink>
+        <maml:linkText>Online Version:</maml:linkText>
+        <maml:uri>https://github.com/marckassay/GmailFilterUtil/blob/0.0.4/docs/Import-XmlFilter.md</maml:uri>
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>Import-XmlFilter.ps1</maml:linkText>
+        <maml:uri>https://github.com/marckassay/GmailFilterUtil/blob/0.0.4/src/xml/Import-XmlFilter.ps1</maml:uri>
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>Import-XmlFilter.Tests.ps1</maml:linkText>
+        <maml:uri>https://github.com/marckassay/GmailFilterUtil/blob/0.0.4/test/xml/Import-XmlFilter.Tests.ps1</maml:uri>
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>`Export-XmlFilter`</maml:linkText>
+        <maml:uri>https://github.com/marckassay/GmailFilterUtil/blob/0.0.4/docs/Export-XmlFilter.md</maml:uri>
+      </maml:navigationLink>
+    </command:relatedLinks>
+  </command:command>
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
+    <command:details>
+      <command:name>Read-PredefinedFromList</command:name>
+      <command:verb>Read</command:verb>
+      <command:noun>PredefinedFromList</command:noun>
+      <maml:description>
+        <maml:para>Reads a predefined list of string entries.</maml:para>
       </maml:description>
     </command:details>
     <maml:description>
@@ -262,7 +358,7 @@ Export-XmlFilter -Data $NewList -Path 'E:\temp\mailFilters.xml'</dev:code>
     </maml:description>
     <command:syntax>
       <command:syntaxItem>
-        <maml:name>Get-FromList</maml:name>
+        <maml:name>Read-PredefinedFromList</maml:name>
         <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="0" aliases="none">
           <maml:name>ListName</maml:name>
           <maml:Description>
@@ -348,7 +444,7 @@ Export-XmlFilter -Data $NewList -Path 'E:\temp\mailFilters.xml'</dev:code>
     <command:examples>
       <command:example>
         <maml:title>-------------------------- Example 1 --------------------------</maml:title>
-        <dev:code>PS C:\&gt; $RecruiterEntries = Get-FromList -ListName 'recruiters.us'</dev:code>
+        <dev:code>PS C:\&gt; $RecruiterEntries = Read-PredefinedFromList -ListName 'recruiters.us'</dev:code>
         <dev:remarks>
           <maml:para>Downloads predefined entries for the 'recruiters.us' set.</maml:para>
         </dev:remarks>
@@ -357,119 +453,7 @@ Export-XmlFilter -Data $NewList -Path 'E:\temp\mailFilters.xml'</dev:code>
     <command:relatedLinks>
       <maml:navigationLink>
         <maml:linkText>Online Version:</maml:linkText>
-        <maml:uri>https://github.com/marckassay/GmailFilterUtil/blob/0.0.3/docs/Get-FromList.md</maml:uri>
-      </maml:navigationLink>
-      <maml:navigationLink>
-        <maml:linkText>Get-FromList.ps1</maml:linkText>
-        <maml:uri>https://github.com/marckassay/GmailFilterUtil/blob/0.0.3/src/list/Get-FromList.ps1</maml:uri>
-      </maml:navigationLink>
-      <maml:navigationLink>
-        <maml:linkText>Get-FromList.Tests.ps1</maml:linkText>
-        <maml:uri>https://github.com/marckassay/GmailFilterUtil/blob/0.0.3/test/list/Get-FromList.Tests.ps1</maml:uri>
-      </maml:navigationLink>
-      <maml:navigationLink>
-        <maml:linkText>`Set-FromList`</maml:linkText>
-        <maml:uri>https://github.com/marckassay/GmailFilterUtil/blob/0.0.3/docs/Set-FromList.md</maml:uri>
-      </maml:navigationLink>
-      <maml:navigationLink>
-        <maml:linkText>`Add-FromList`</maml:linkText>
-        <maml:uri>https://github.com/marckassay/GmailFilterUtil/blob/0.0.3/docs/Add-FromList.md</maml:uri>
-      </maml:navigationLink>
-    </command:relatedLinks>
-  </command:command>
-  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
-    <command:details>
-      <command:name>Import-XmlFilter</command:name>
-      <command:verb>Import</command:verb>
-      <command:noun>XmlFilter</command:noun>
-      <maml:description>
-        <maml:para>Imports into PowerShell session, a Gmail exported filter.</maml:para>
-      </maml:description>
-    </command:details>
-    <maml:description>
-      <maml:para>Imports an Xml Gmail filter and parses that data into PowerShell datatype of `GmailFilter`.  Instructions from Google on how to import filters, see this link (https://support.google.com/mail/answer/6579#)</maml:para>
-    </maml:description>
-    <command:syntax>
-      <command:syntaxItem>
-        <maml:name>Import-XmlFilter</maml:name>
-        <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="True (ByPropertyName, ByValue)" position="0" aliases="none">
-          <maml:name>Path</maml:name>
-          <maml:Description>
-            <maml:para>Path to the exported Gmail filter. This must be a Xml file from Gmail.</maml:para>
-          </maml:Description>
-          <command:parameterValue required="true" variableLength="false">String[]</command:parameterValue>
-          <dev:type>
-            <maml:name>String[]</maml:name>
-            <maml:uri />
-          </dev:type>
-          <dev:defaultValue>None</dev:defaultValue>
-        </command:parameter>
-      </command:syntaxItem>
-    </command:syntax>
-    <command:parameters>
-      <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="True (ByPropertyName, ByValue)" position="0" aliases="none">
-        <maml:name>Path</maml:name>
-        <maml:Description>
-          <maml:para>Path to the exported Gmail filter. This must be a Xml file from Gmail.</maml:para>
-        </maml:Description>
-        <command:parameterValue required="true" variableLength="false">String[]</command:parameterValue>
-        <dev:type>
-          <maml:name>String[]</maml:name>
-          <maml:uri />
-        </dev:type>
-        <dev:defaultValue>None</dev:defaultValue>
-      </command:parameter>
-    </command:parameters>
-    <command:inputTypes>
-      <command:inputType>
-        <dev:type>
-          <maml:name>System.String[]</maml:name>
-        </dev:type>
-        <maml:description>
-          <maml:para></maml:para>
-        </maml:description>
-      </command:inputType>
-    </command:inputTypes>
-    <command:returnValues>
-      <command:returnValue>
-        <dev:type>
-          <maml:name>GmailFilter</maml:name>
-        </dev:type>
-        <maml:description>
-          <maml:para></maml:para>
-        </maml:description>
-      </command:returnValue>
-    </command:returnValues>
-    <maml:alertSet>
-      <maml:alert>
-        <maml:para></maml:para>
-      </maml:alert>
-    </maml:alertSet>
-    <command:examples>
-      <command:example>
-        <maml:title>-------------------------- Example 1 --------------------------</maml:title>
-        <dev:code>PS C:\&gt; $Feed = Import-XmlFilter -Path 'C:\Users\marc\Downloads\mailFilters.xml'</dev:code>
-        <dev:remarks>
-          <maml:para>The default filename is `mailFilter` when exported out from Gmail. When downloaded, it can be found in the users download folder as this example shows.</maml:para>
-        </dev:remarks>
-      </command:example>
-    </command:examples>
-    <command:relatedLinks>
-      <maml:navigationLink>
-        <maml:linkText>Online Version:</maml:linkText>
-        <maml:uri>https://github.com/marckassay/GmailFilterUtil/blob/0.0.3/docs/Import-XmlFilter.md</maml:uri>
-      </maml:navigationLink>
-      <maml:navigationLink>
-        <maml:linkText>Import-XmlFilter.ps1</maml:linkText>
-        <maml:uri>https://github.com/marckassay/GmailFilterUtil/blob/0.0.3/src/xml/Import-XmlFilter.ps1</maml:uri>
-      </maml:navigationLink>
-      <maml:navigationLink>
-        <maml:linkText>Import-XmlFilter.Tests.ps1</maml:linkText>
-        <maml:uri>https://github.com/marckassay/GmailFilterUtil/blob/0.0.3/test/xml/Import-XmlFilter.Tests.ps1</maml:uri>
-      </maml:navigationLink>
-      <maml:navigationLink>
-        <maml:linkText>`Export-XmlFilter`</maml:linkText>
-        <maml:uri>https://github.com/marckassay/GmailFilterUtil/blob/0.0.3/docs/Export-XmlFilter.md</maml:uri>
+        <maml:uri>https://github.com/marckassay/GmailFilterUtil/blob/0.0.4/docs/Read-PredefinedFromList.md</maml:uri>
       </maml:navigationLink>
     </command:relatedLinks>
   </command:command>
@@ -488,18 +472,6 @@ Export-XmlFilter -Data $NewList -Path 'E:\temp\mailFilters.xml'</dev:code>
     <command:syntax>
       <command:syntaxItem>
         <maml:name>Set-FromList</maml:name>
-        <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="True (ByValue)" position="0" aliases="none">
-          <maml:name>Data</maml:name>
-          <maml:Description>
-            <maml:para>{{Fill Data Description}}</maml:para>
-          </maml:Description>
-          <command:parameterValue required="true" variableLength="false">GmailFilter</command:parameterValue>
-          <dev:type>
-            <maml:name>GmailFilter</maml:name>
-            <maml:uri />
-          </dev:type>
-          <dev:defaultValue>None</dev:defaultValue>
-        </command:parameter>
         <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="1" aliases="none">
           <maml:name>Value</maml:name>
           <maml:Description>
@@ -512,21 +484,21 @@ Export-XmlFilter -Data $NewList -Path 'E:\temp\mailFilters.xml'</dev:code>
           </dev:type>
           <dev:defaultValue>None</dev:defaultValue>
         </command:parameter>
+        <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="True (ByValue)" position="named" aliases="none">
+          <maml:name>GmailFilter</maml:name>
+          <maml:Description>
+            <maml:para>{{Fill GmailFilter Description}}</maml:para>
+          </maml:Description>
+          <command:parameterValue required="true" variableLength="false">GmailFilter</command:parameterValue>
+          <dev:type>
+            <maml:name>GmailFilter</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
       </command:syntaxItem>
     </command:syntax>
     <command:parameters>
-      <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="True (ByValue)" position="0" aliases="none">
-        <maml:name>Data</maml:name>
-        <maml:Description>
-          <maml:para>{{Fill Data Description}}</maml:para>
-        </maml:Description>
-        <command:parameterValue required="true" variableLength="false">GmailFilter</command:parameterValue>
-        <dev:type>
-          <maml:name>GmailFilter</maml:name>
-          <maml:uri />
-        </dev:type>
-        <dev:defaultValue>None</dev:defaultValue>
-      </command:parameter>
       <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="1" aliases="none">
         <maml:name>Value</maml:name>
         <maml:Description>
@@ -535,6 +507,18 @@ Export-XmlFilter -Data $NewList -Path 'E:\temp\mailFilters.xml'</dev:code>
         <command:parameterValue required="true" variableLength="false">String[]</command:parameterValue>
         <dev:type>
           <maml:name>String[]</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="True (ByValue)" position="named" aliases="none">
+        <maml:name>GmailFilter</maml:name>
+        <maml:Description>
+          <maml:para>{{Fill GmailFilter Description}}</maml:para>
+        </maml:Description>
+        <command:parameterValue required="true" variableLength="false">GmailFilter</command:parameterValue>
+        <dev:type>
+          <maml:name>GmailFilter</maml:name>
           <maml:uri />
         </dev:type>
         <dev:defaultValue>None</dev:defaultValue>
@@ -577,23 +561,23 @@ Export-XmlFilter -Data $NewList -Path 'E:\temp\mailFilters.xml'</dev:code>
     <command:relatedLinks>
       <maml:navigationLink>
         <maml:linkText>Online Version:</maml:linkText>
-        <maml:uri>https://github.com/marckassay/GmailFilterUtil/blob/0.0.3/docs/Set-FromList.md</maml:uri>
+        <maml:uri>https://github.com/marckassay/GmailFilterUtil/blob/0.0.4/docs/Set-FromList.md</maml:uri>
       </maml:navigationLink>
       <maml:navigationLink>
         <maml:linkText>Set-FromList.ps1</maml:linkText>
-        <maml:uri>https://github.com/marckassay/GmailFilterUtil/blob/0.0.3/src/list/Set-FromList.ps1</maml:uri>
+        <maml:uri>https://github.com/marckassay/GmailFilterUtil/blob/0.0.4/src/list/Set-FromList.ps1</maml:uri>
       </maml:navigationLink>
       <maml:navigationLink>
         <maml:linkText>Set-FromList.Tests.ps1</maml:linkText>
-        <maml:uri>https://github.com/marckassay/GmailFilterUtil/blob/0.0.3/test/list/Set-FromList.Tests.ps1</maml:uri>
+        <maml:uri>https://github.com/marckassay/GmailFilterUtil/blob/0.0.4/test/list/Set-FromList.Tests.ps1</maml:uri>
       </maml:navigationLink>
       <maml:navigationLink>
         <maml:linkText>`Get-FromList`</maml:linkText>
-        <maml:uri>https://github.com/marckassay/GmailFilterUtil/blob/0.0.3/docs/Get-FromList.md</maml:uri>
+        <maml:uri>https://github.com/marckassay/GmailFilterUtil/blob/0.0.4/docs/Get-FromList.md</maml:uri>
       </maml:navigationLink>
       <maml:navigationLink>
         <maml:linkText>`Add-FromList`</maml:linkText>
-        <maml:uri>https://github.com/marckassay/GmailFilterUtil/blob/0.0.3/docs/Add-FromList.md</maml:uri>
+        <maml:uri>https://github.com/marckassay/GmailFilterUtil/blob/0.0.4/docs/Add-FromList.md</maml:uri>
       </maml:navigationLink>
     </command:relatedLinks>
   </command:command>

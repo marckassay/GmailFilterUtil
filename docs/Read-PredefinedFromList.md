@@ -1,19 +1,19 @@
 ---
 external help file: GmailFilterUtil-help.xml
 Module Name: GmailFilterUtil
-online version: https://github.com/marckassay/GmailFilterUtil/blob/0.0.3/docs/Get-FromList.md
+online version: https://github.com/marckassay/GmailFilterUtil/blob/0.0.4/docs/Read-PredefinedFromList.md
 schema: 2.0.0
 ---
 
-# Get-FromList
+# Read-PredefinedFromList
 
 ## SYNOPSIS
-Get predefined list of string entries.
+Reads a predefined list of string entries.
 
 ## SYNTAX
 
 ```
-Get-FromList [-ListName] <String[]> [[-BaseUri] <String>] [<CommonParameters>]
+Read-PredefinedFromList [-ListName] <String[]> [[-BaseUri] <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -25,7 +25,7 @@ Currently the only predefined list, using the default `BaseUri` parameter is `re
 ### Example 1
 
 ```powershell
-PS C:\> $RecruiterEntries = Get-FromList -ListName 'recruiters.us'
+PS C:\> $RecruiterEntries = Read-PredefinedFromList -ListName 'recruiters.us'
 ```
 
 Downloads predefined entries for the 'recruiters.us' set.
@@ -33,7 +33,6 @@ Downloads predefined entries for the 'recruiters.us' set.
 ## PARAMETERS
 
 ### -BaseUri
-
 Defaults to:
     - <https://raw.githubusercontent.com/marckassay/GmailFilterUtil/master/resources/>
 
@@ -52,7 +51,6 @@ Accept wildcard characters: False
 ```
 
 ### -ListName
-
 The txt filename where `BaseUri` points to.
 
 ```yaml
@@ -69,7 +67,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (<http://go.microsoft.com/fwlink/?LinkID=113216).>
 
 ## INPUTS
 
@@ -83,10 +81,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-FromList.ps1](https://github.com/marckassay/GmailFilterUtil/blob/0.0.3/src/list/Get-FromList.ps1)
+[Read-PredefinedFromList.ps1](https://github.com/marckassay/GmailFilterUtil/blob/0.0.4/src/list/Read-PredefinedFromList.ps1)
 
-[Get-FromList.Tests.ps1](https://github.com/marckassay/GmailFilterUtil/blob/0.0.3/test/list/Get-FromList.Tests.ps1)
+[Read-PredefinedFromList.Tests.ps1](https://github.com/marckassay/GmailFilterUtil/blob/0.0.4/test/list/Read-PredefinedFromList.Tests.ps1)
 
-[`Set-FromList`](https://github.com/marckassay/GmailFilterUtil/blob/0.0.3/docs/Set-FromList.md)
+[`Set-FromList`](https://github.com/marckassay/GmailFilterUtil/blob/0.0.4/docs/Set-FromList.md)
 
-[`Add-FromList`](https://github.com/marckassay/GmailFilterUtil/blob/0.0.3/docs/Add-FromList.md)
+[`Add-FromList`](https://github.com/marckassay/GmailFilterUtil/blob/0.0.4/docs/Add-FromList.md)

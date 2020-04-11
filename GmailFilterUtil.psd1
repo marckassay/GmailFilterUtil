@@ -12,7 +12,7 @@
     RootModule        = 'GmailFilterUtil.psm1'
 
     # Version number of this module.
-    ModuleVersion     = '0.0.3'
+    ModuleVersion = '0.0.4'
 
     # Supported PSEditions
     # CompatiblePSEditions = @()
@@ -104,10 +104,10 @@
             Tags       = @('Gmail', 'filter', 'recruiter', 'headhunter')
 
             # A URL to the license for this module.
-            LicenseUri = 'https://github.com/marckassay/GmailFilterUtil/tree/0.0.3/LICENSE'
+            LicenseUri = 'https://github.com/marckassay/GmailFilterUtil/tree/0.0.4/LICENSE'
 
             # A URL to the main website for this project.
-            ProjectUri = 'https://github.com/marckassay/GmailFilterUtil/tree/0.0.3/'
+            ProjectUri = 'https://github.com/marckassay/GmailFilterUtil/tree/0.0.4/'
 
             # A URL to an icon representing this module.
             # IconUri = ''
@@ -129,7 +129,7 @@
     } # End of PrivateData hashtable
 
     # HelpInfo URI of this module
-    HelpInfoURI       = 'https://github.com/marckassay/GmailFilterUtil/tree/0.0.3'
+    HelpInfoURI = 'https://github.com/marckassay/GmailFilterUtil/tree/0.0.4'
 
     # Default prefix for commands exported from this module. Override the default prefix using Import-Module -Prefix.
     # DefaultCommandPrefix = ''
