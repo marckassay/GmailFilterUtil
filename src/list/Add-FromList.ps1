@@ -15,7 +15,7 @@ function Add-FromList {
         )]
         [ValidateNotNull()]
         [GmailFilter]
-        $Data,
+        $GmailFilter,
 
         [Parameter(
             Mandatory = $true,
@@ -30,21 +30,10 @@ function Add-FromList {
 
     end {
 
-        if ($Data.From.length -gt 0) {
-            $Value += $Data.From.Split(' OR ')
+        if ($GmailFilter.From.length -gt 0) {
+            $Value += $GmailFilter.From.Split(' OR ')
         }
 
-        $SortedValue = $Value | Sort-Object | Select-Object -Unique
-        $Data.From = $SortedValue | ForEach-Object -Begin { $script:Index = 0 } {
-            if ($script:Index -eq 0) {
-                "$_"
-            }
-            else {
-                "OR $_"
-            }
-            $script:Index++
-        } -End { Write-Verbose "The total number of entries for the From list is now '$script:Index'." }
-
-        $Data
+        $GmailFilter.From = Format-FromListExpression -Value $Value
     }
 }

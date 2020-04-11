@@ -12,7 +12,7 @@
     RootModule        = 'GmailFilterUtil.psm1'
 
     # Version number of this module.
-    ModuleVersion = '0.0.3'
+    ModuleVersion     = '0.0.3'
 
     # Supported PSEditions
     # CompatiblePSEditions = @()
@@ -72,7 +72,7 @@
     FunctionsToExport = @(
         'Add-FromList',
         'Export-XmlFilter',
-        'Get-FromList',
+        'Read-PredefinedFromList',
         'Import-XmlFilter',
         'Set-FromList'
     )
@@ -129,7 +129,7 @@
     } # End of PrivateData hashtable
 
     # HelpInfo URI of this module
-    HelpInfoURI = 'https://github.com/marckassay/GmailFilterUtil/tree/0.0.3'
+    HelpInfoURI       = 'https://github.com/marckassay/GmailFilterUtil/tree/0.0.3'
 
     # Default prefix for commands exported from this module. Override the default prefix using Import-Module -Prefix.
     # DefaultCommandPrefix = ''

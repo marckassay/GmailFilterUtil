@@ -15,7 +15,7 @@ function Set-FromList {
         )]
         [ValidateNotNull()]
         [GmailFilter]
-        $Data,
+        $GmailFilter,
 
         [Parameter(
             Mandatory = $true,
@@ -29,21 +29,8 @@ function Set-FromList {
     )
 
     end {
-        # since this is set versus add, clear the existing data. this behavior replicates PS's
+        # since this is Set versus Add, overwrite the existing data. this behavior replicates PS's
         # Add-Content and Set-Content functions
-        $Data.From = ''
-        
-        $SortedValue = $Value | Sort-Object | Select-Object -Unique
-        $Data.From = $SortedValue | ForEach-Object -Begin { $script:Index = 0 } {
-            if ($script:Index -eq 0) {
-                "$_"
-            }
-            else {
-                "OR $_"
-            }
-            $script:Index++
-        } -End { Write-Verbose "The total number of entries for the From list is now '$script:Index'." }
-
-        $Data
+        $GmailFilter.From = Format-FromListExpression -Value $Value
     }
 }

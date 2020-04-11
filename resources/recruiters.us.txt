@@ -16,14 +16,17 @@
 *@arthurgrand.com
 *@arthurlawrence.net
 *@avanceservices.us
+*@axelon.com
 *@brainbeeus.com
 *@catstaffing-us.com
+*@ceiamerica.com
 *@centralsquare.applicant.email
 *@ciber.com
 *@clifyx.com
 *@cogentinfo.com
 *@collabera.com
 *@compunnel.com
+*@consultis.com
 *@cy-tec.com
 *@deloitte.com
 *@dice.com
@@ -34,6 +37,7 @@
 *@diverselynx.com
 *@droisys.com
 *@dtglobalstaffing.com
+*@dynpro.com
 *@eateam.com
 *@edoorsinc.com
 *@email.nexxt.com
@@ -53,6 +57,7 @@
 *@iic.com
 *@infinity-cs.com
 *@insightglobal.com
+*@intelliswift.com
 *@invalidemail.com
 *@iplaceusa.com
 *@irtalent.com

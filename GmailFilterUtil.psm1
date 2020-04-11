@@ -1,5 +1,6 @@
 using module .\src\list\Add-FromList.ps1
-using module .\src\list\Get-FromList.ps1
+using module .\src\list\Format-FromListExpression.ps1
+using module .\src\list\Read-PredefinedFromList.ps1
 using module .\src\list\Set-FromList.ps1
 using module .\src\xml\Export-XmlFilter.ps1
 using module .\src\xml\Import-XmlFilter.ps1
